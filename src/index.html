@@ -1,12 +1,76 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0"/>
+    <!-- <script
+      src="https://kit.fontawesome.com/af6e470cf9.js"
+      crossorigin="anonymous"
+    ></script>   Link para tener mis iconos de font awesome -->
+    <link rel="stylesheet" href="css/all.min.css"> <!--Al descargar los iconos puedo usarlos de esta manera-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"/>
     <title>Data Lovers</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="img/icono.ico" />
   </head>
+
   <body>
-    <div id="root"></div>
+    <!--IMAGEN PRINCIPAL -->
+  <div class="contenedor">
+    <section class="contenedor-imagen" id="contenedor-imagen">
+      <div class="imagenFondo"><img src="img/fondo.jpg" alt="ImagenFondo"></div>
+
+          <!--Menú principal-->
+          <nav>
+            <h1 class="titulo">Studios Ghibli films</h1>
+            <ul class="lista_menu">
+              <a href="#" class="activo">Inicio</a>
+              <a href="#" class="">Peliculas</a>
+              <a href="#" class="">Directores</a>
+              <a href="#" class="">Personajes</a>
+              <a href="#" class="">Más recientes</a>
+            </ul>
+          </nav>
+
+    </section>
+  </div>
+
+
+        <!--CONTENEDOR DEL BOTÓN-->
+        <div class="contenedor-btn">
+          <button class="btn-abrir-intro" id="btn-abrir-intro">
+            <!--Botón que permite abrir y cerrar la intro-->
+            <!--ICONO DEL BOTÖN ABRIR Y CERRAR-->
+            <i class="fa-solid fa-angle-down"></i>
+          </button>
+        </div>
+        <!--lINEA INTRO-->
+        <hr />
+        <!--tEXTO INTRODUCCIÓN-->
+        <div class="grupo">
+          <div class="intro" id="intro">
+          Studio Ghibli Inc. (株式会社スタジオジブリ) is a Japanese animation
+          studio. It is best known for its animated feature films. Its mascot
+          and most recognizable symbol is a character named Totoro. These films
+          have drastically transformed the world of animated films with their
+          superior filmmaking techniques and profound scriptwriting. Among the
+          studio's highest-grossing films are Spirited Away (2001), Howl's
+          Moving Castle (2004) and Ponyo (2008). Some of these films have
+          received nominations and have won some of them.
+          </div>
+        </div>
+      </main>
+
+    <div class="contenedorPelis" id="contendorPelis">
+      <section class="peliculas" id="peliculas"></section>
+
+    </div>
     <script src="main.js" type="module"></script>
   </body>
 </html>
