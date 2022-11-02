@@ -12,39 +12,41 @@
     <link rel="stylesheet" href="css/all.min.css"> <!--Al descargar los iconos puedo usarlos de esta manera-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet"/>
     <title>Data Lovers</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" href="img/icono.ico" />
   </head>
 
   <body>
+
+
     <!--IMAGEN PRINCIPAL -->
   <header class="contenedor">
-    <section class="contenedor-imagen" id="contenedor-imagen">
-      <div class="imagenFondo"><img src="img/fondo.jpg" alt="ImagenFondo"></div>
+    <div class="imagenFondo" id="contenedor-imagen"><img src="img/fondo.jpg" alt="ImagenFondo">
 
+      <!--TITULO PRINCIPAL-->
+      <div class="titulo">
+        <h1>Studios Ghibli films</h1>
+      </div>
+    </div>
           <!--Menú principal-->
-          <nav>
-            <h1 class="titulo">Studios Ghibli films</h1>
+        <div class="contenedor-menu" id="nav">
+          <nav class="nav-menu">
             <ul class="lista_menu">
-              <a href="#" class="activo">Inicio</a>
+              <a href="#" class="activo">Inicio</a>  <!-- En # utilizo el HTML que al oprimir me lleve alla-->
               <a href="#" class="">Peliculas</a>
               <a href="#" class="">Directores</a>
               <a href="#" class="">Personajes</a>
               <a href="#" class="">Más recientes</a>
             </ul>
           </nav>
-
-    </section>
-  </header>
-
+        </div>
 
         <!--CONTENEDOR DEL BOTÓN-->
         <div class="contenedor-btn">
           <button class="btn-abrir-intro" id="btn-abrir-intro">
             <!--Botón que permite abrir y cerrar la intro-->
-            <!--ICONO DEL BOTÖN ABRIR Y CERRAR-->
+            <!--ICONO DEL BOTON ABRIR Y CERRAR-->
             <i class="fa-solid fa-angle-down"></i>
           </button>
         </div>
@@ -65,12 +67,20 @@
         </div>
       </main>
 
-      <div>Hola</div>
+  </header>
 
-    <div class="contenedorPelis" id="contendorPelis">
-      <section class="peliculas" id="peliculas"></section>
 
-    </div>
+<section class="contenedor-pelis" id="contenedor-pelis">
+  <main>
+      <div class="peliculas" id="peliculas">
+      <div class="title" id="title"></div>
+      <div class="poster" id="poster"></div>
+      <div class="release_date" id="release_date"></div>
+      </div>
+
+  </main>
+</section>
+
     <script src="main.js" type="module"></script>
   </body>
 </html>

@@ -10,20 +10,23 @@ btnAbrirIntro.addEventListener('click', () => {   /*Evento clic para luego pasar
     introduccion.classList.toggle('active');
 } );
 
+
 let films = ghibli.films;
 // console.log(films);
-
 const peliculas = document.getElementById("peliculas");
-
 for (let i = 0; i < films.length; i++){
     // console.log(films[i].title);
     // console.log(films[i].poster);
     peliculas.innerHTML += `
-    <div class = "tarjeta">
-    <h2>${films[i].title}</h2>
+    <div class = "portada">
     <img src="${films[i].poster}" alt"">
-    <p>${films[i].description}</p>
-    <p>${films[i].release_date}</p>
+
+    <div class = "textos_portada">
+    <h2>${films[i].title}</h2>
+    <p>year:${films[i].release_date}</p>
+    </div>
     </div>
     `
 }
+
+//<p>${films[i].description}</p>

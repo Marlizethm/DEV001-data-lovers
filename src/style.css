@@ -1,239 +1,218 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
 
 
-/*------- CONFIGURACIÓN GENERAL PARA EMPEZAR ------*/
+
+
+/**------- CONFIGURACIÓN GENERAL PARA EMPEZAR ------*/
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    text-decoration: none;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none; /*Para quitar las letras subrayadas*/
 }
 
 /*------------- Lo utilizo para definir los colores ------*/
 :root {
-    --white_color: #edf6f9;
-    --white_color2: #ffffff;
-    --pink_color: #e2b3c5;
-    --pink_color2: #e0a2bb;
-    --blue_color: #84cee3;
-    --purple_color: #7e7eaf;
-    --purple_color2: #ab83ba;
-    --darkBlue_color: #319aca;
-    --darkBlue_color2: #3a80d1;
-    --darkBlue_color3: #478ddd;
-    --yellow_color: #efda86;
-    --yellow_color2: #fce688;
-    --green_color: #5bc8ac;
+  --white_color: #edf6f9;
+  --white_color2: #ffffff;
+  --pink_color: #e2b3c5;
+  --pink_color2: #e0a2bb;
+  --blue_color: #84cee3;
+  --purple_color: #7e7eaf;
+  --purple_color2: #ab83ba;
+  --darkBlue_color: #319aca;
+  --darkBlue_color2: #3a80d1;
+  --darkBlue_color3: #478ddd;
+  --darkBlue_color4: #627288;
+  --yellow_color: #efda86;
+  --yellow_color2: #fce688;
+  --green_color: #5bc8ac;
 }
 
 
-/*-------------- IMAGEN DE FONDO -------*/
+/**-------------- IMAGEN DE FONDO -------*/
 .contenedor {
-    width: 100%;
-    height: 100%;
-    position: relative;
+  width: 100%;
+  height: 100%;
+  position: relative;
 }
-
 
 .imagenFondo img {
-    width: 100%;
-    height: 100%;
-    z-index: 1;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
 }
 
 .titulo {
-    font-size: 40px;
-    text-align: right;
-    padding: 15px;
-    padding-top: 5px;
-    z-index: 3;
-    position: relative;
-    color: var(--white_color2);
-    /* text-shadow: 0 3px 3px 0 var(--darkBlue_color2); */
-    top: -100px;
-    justify-content: flex-end; /*Para dejar el titulo en la derecha*/
-}
-
-/*---------- Alineación del texto del menú principal ------*/
-nav ul {
-  background-color:var(--pink_color2);
-  opacity: 1;
+  font-size: 30px;
+  text-align: right;
   padding: 15px;
-  position: absolute;
-  top: 0px;
-  z-index: 2;
-  box-shadow: 0 3px 4px 0 var(--purple_color2);
-  display: inline-block;
+  padding-top: 5px;
+  z-index: 3;
+  position: relative;
+  color: var(--white_color2);
+  text-shadow: 3px 0px 3px var(--darkBlue_color2);
+  top: -100px;
+  font-family: 'Fredoka One', cursiva;
 }
 
-/*---------- MENÚ PRINCIPAL -----*/
+
+
+/**---------- MENÚ PRINCIPAL -----*/
+/*---------- Alineación del contenedor del menú principal ------*/
+
+.contenedor-menu {
+  width: 100%;
+  height: 50px;
+  padding: 15px;
+  box-shadow: 0 3px 4px 0 var(--purple_color2);
+  position: fixed; /*No se crea ningun espoacio para el elemento*/
+  top: 0;
+  background-color: var(--pink_color2);
+  z-index: 5;
+  opacity: 1;
+}
+
 a {
   color: var(--white_color2);
-  background-color: var(--pink_color);
-  border-radius: 5px;
+  /* background-color: var(--pink_color); */
+  /* box-shadow: 0px 2px 2px 0 var(--darkBlue_color4); */
+  /* border-radius: 5px; */
+  font-size: 20px;
   padding: 4px 5px;
   align-items: center;
   justify-content: center;
-  box-shadow: 0px 3px 3px 0 rgba(90, 116, 148, 0.3);
-  font-family: "Noto Serif", serif;
-  text-decoration: none; /*Para quitar las letras subrayadas*/
+  font-family: 'Fredoka One', cursiva;
 }
 
 
-/*---------- MENU NAV RESPONSIVE-----------*/
-/* .nav {
-  background-color: var(--pink_color2);
-  color: var(--white_color2);
-  padding: 1.5em 5%;
-  display: grid;
-  gap: 1.5em;
-  align-items: center;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-}
 
-.titulo {
-  margin: 0 auto;
-}
-
-.lista {
-  padding: 0;
-  list-style: none;
-  margin: 0 auto;
-  display: grid;
-  justify-content: end;
-  grid-auto-flow: column;
-  gap: 2.5em;
-}
-
-.link {
-  color: var(--white_color);
-  text-decoration: none;
-  font-weight: normal;
-}
-
-@media (min-width:693px)
-{
-  .titulo, .lista{
-    margin: unset;
-  }
-} */
-
-
-
-
-/*------------- LINEA / DIVISIÓN ------------*/
+/**------------- LINEA / DIVISIÓN ------------*/
 hr {
-    height: 10px;
-    background-color: var(--pink_color2);
-    position: relative;
-    top: -125px;
-    z-index: 2;
-    border: none;
-
+  height: 10px;
+  background-color: var(--pink_color2);
+  position: relative;
+  top: -150px;
+  z-index: 2;
+  border: none;
 }
 
-/* button::after,
-    button::before {
-    background-color: var(--pink_color);
-} */
 
-
-
-
-/*------------------- CONTENEDOR DEL BOTÓN --------------*/
+/**------------------- CONTENEDOR DEL BOTÓN --------------*/
 .contenedor-btn .btn-abrir-intro {
-    width: 50px; /*Ancho del contenedor*/
-    height: 50px; /*Alto del contenedor*/
-    font-size: 20px; /*Tamaño de fuente*/
-    line-height: 20px; /*Altura de linea*/
-    background: var(--blue_color); /*Color azul (inicial)*/
-    position: relative; /*Lo utilizo para poder desplazar mi botón*/
-    top:-90px; /*Para subir mi boton*/
-    z-index: 3; /*El orden de la capa para que quede arriba*/
-    border-radius: 100%; /*Borde de la caja*/
-    box-shadow: 0 4px 8px var(--darkBlue_color2); /*Sombra de la caja*/
-    padding: 5px;
-    transition: all 0.2s ease;
-    border: none; /*Quitarle el borde que agrega por defecto*/
-    cursor: pointer; /*Cursor para que aparezca una mano*/
-    transform: rotate(180deg); /*Para que rote y quede mirando hacia arriba*/
+  width: 50px; /*Ancho del contenedor*/
+  height: 50px; /*Alto del contenedor*/
+  font-size: 20px; /*Tamaño de fuente*/
+  line-height: 20px; /*Altura de linea*/
+  background: var(--blue_color); /*Color azul (inicial)*/
+  position: relative; /*Lo utilizo para poder desplazar mi botón*/
+  top: -120px; /*Para subir mi boton*/
+  z-index: 3; /*El orden de la capa para que quede arriba*/
+  border-radius: 100%; /*Borde de la caja*/
+  box-shadow: 0 4px 8px var(--darkBlue_color2); /*Sombra de la caja*/
+  padding: 5px;
+  transition: all 0.2s ease;
+  border: none; /*Quitarle el borde que agrega por defecto*/
+  cursor: pointer; /*Cursor para que aparezca una mano*/
+  transform: rotate(180deg); /*Para que rote y quede mirando hacia arriba*/
 }
 
 .contenedor-btn {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+  top: -120px;
 }
 
-/*----------- ESTILO ICONO FLECHA ----------*/
+/**----------- ESTILO ICONO FLECHA ----------*/
 .contenedor-btn i {
-    color: var(--white_color2); /*Color de texto blanco (icono)*/
-    font-size: 30px;
+  color: var(--white_color2); /*Color de texto blanco (icono)*/
+  font-size: 30px;
 }
 
 /*------ :hover (para que aparezca rosa al acercar el puntero) -----*/
 .contenedor-btn .btn-abrir-intro:hover {
-    background: var(--pink_color);
+  background: var(--pink_color);
 }
 
 /*------ .active (cuando tenga la clase active rote 45grados) ---*/
 .contenedor-btn .btn-abrir-intro.active {
-    transform: rotate(360deg);
+  transform: rotate(360deg);
 }
 
 
 
-
-
-
-/*--------------- CONTENEDOR DEL INTRO ---------*/
+/**--------------- CONTENEDOR DEL INTRO ---------*/
 .intro {
-    font-family: 'Mukta', sans-serif;
-    color: var(--darkBlue_color2);
-    margin-left: 30px;
-    margin-right: 30px;
-    padding: 20px;
-    position: relative;
-    top: -80px;
-    z-index: 1;
-    border-radius: 10px;
-    border: 5px solid var(--pink_color2);
-    background-color: var(--white_color2);
-    transition: clip-path .3s ease-out;
+  font-family: "Mukta", sans-serif;
+  color: var(--darkBlue_color2);
+  margin-left: 150px;
+  margin-right: 150px;
+  padding: 20px;
+  position: relative;
+  top: -110px;
+  z-index: 1;
+  border-radius: 10px;
+  border: 5px solid var(--pink_color2);
+  background-color: var(--white_color2);
+  transition: clip-path 0.3s ease-out;
+  position: relative;
 }
 
 .intro.active {
-    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);  /*Esquina Izq Sup (cordenada 0 0 (de izq a der y de arriba hacia abajo)) - 100% hacia la cord.derecha y 0 de arriba a abajo - 100% hacia la der y 0 que vaya hacia abajo - nuevamente 0 0 */
+  clip-path: polygon( 0 0, 100% 0, 100% 0, 0 0); /*Esquina Izq Sup (cordenada 0 0 (de izq a der y de arriba hacia abajo)) - 100% hacia la cord.derecha y 0 de arriba a abajo - 100% hacia la der y 0 que vaya hacia abajo - nuevamente 0 0 */
 }
 
 
+/**------------------- PORTADAS PELICULAS ---------------*/
 
-
-
-/*--------------- CONTENEDOR DE LAS PELICULAS ---------*/
+.contenedor-pelis {
+  width: 90%;
+  max-width: 1200px;
+  overflow: hidden;
+  margin: auto;
+  padding: 30px 0;
+}
 
 
 .peliculas {
-    display: flex;
-    gap: 15px;
-    flex-wrap: wrap;
-    position:  sticky;
-    /* margin: 40px; */
-    justify-content: space-around;
-
+  padding: 10px 0px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 
-.tarjeta img {
-    width: 50%;
-    height: 70%;
-    position:  sticky;
+.portada img {   /*div del main js*/
+  width: 80%;
+  height: 70%;
+  border-radius: 10px 10px 0 0;
 }
 
-.tarjeta {
-    width: 300px;
-    height: 300px;
-    margin-bottom: 15px;
-    overflow: hidden; /*Ocultar un poco el texto mientras arreglamos el resto*/
-    position:  sticky;
+div .portada img {
+position: relative;
 }
+
+.portada {   /*div del main js*/
+  border-radius: 10px;
+  width: 250px;
+  height: 450px;
+  box-shadow: var(--blue_color);
+  text-transform: uppercase;
+  font-size: 12px;
+  margin-bottom: 15px;
+  background-color: var(--pink_color);
+  color: white;
+}
+
+/* .portada {   /*div del main js
+  width: 300px;
+  height: 400px;
+  margin-bottom: 15px;
+  overflow: hidden; /*Ocultar un poco el texto de la descripcion mientras arreglamos el resto
+  background-color: var(--pink_color);
+  color: var(--white_color);
+  text-transform: uppercase;
+} */
