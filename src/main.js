@@ -23,7 +23,7 @@ for (let i = 0; i < films.length; i++){
 
     <div class = "textos_portada">
     <h2>${films[i].title}</h2>
-    <p>year:${films[i].release_date}</p>
+    <p>${films[i].release_date}</p>
     </div>
     </div>
     `

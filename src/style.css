@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Titan+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Concert+One&display=swap');
 
 
 
@@ -28,33 +30,43 @@
   --yellow_color: #efda86;
   --yellow_color2: #fce688;
   --green_color: #5bc8ac;
+  --sombra: linear-gradient (90deg, #e2b3c5 80%, #ffffff 50%);
 }
 
 
 /**-------------- IMAGEN DE FONDO -------*/
 .contenedor {
-  width: 100%;
-  height: 100%;
+  width:100%;
+  height: 480px;
   position: relative;
 }
 
+.imagenFondo {
+  display: block;
+  background-color: #3a80d1;
+  max-height: 350px;
+}
 .imagenFondo img {
   width: 100%;
   height: 100%;
   z-index: 1;
+  display: block;
+  position: relative;
+  max-height: 350px;
 }
 
+/**-------------- TITULO PRINCIPAL -------*/
 .titulo {
-  font-size: 30px;
+  font-size: 25px;
   text-align: right;
-  padding: 15px;
-  padding-top: 5px;
+  padding: 25px;
+  /* padding-top: 10px; */
   z-index: 3;
   position: relative;
   color: var(--white_color2);
   text-shadow: 3px 0px 3px var(--darkBlue_color2);
   top: -100px;
-  font-family: 'Fredoka One', cursiva;
+  font-family: 'Titan One', cursive;
 }
 
 
@@ -71,7 +83,11 @@
   top: 0;
   background-color: var(--pink_color2);
   z-index: 5;
-  opacity: 1;
+
+}
+
+.contenedor-menu a:hover {
+  color: var(--purple_color);
 }
 
 a {
@@ -79,27 +95,51 @@ a {
   /* background-color: var(--pink_color); */
   /* box-shadow: 0px 2px 2px 0 var(--darkBlue_color4); */
   /* border-radius: 5px; */
-  font-size: 20px;
-  padding: 4px 5px;
-  align-items: center;
+  font-size: 18px;
+  padding: 3px 15px;
+  align-items: right;
   justify-content: center;
-  font-family: 'Fredoka One', cursiva;
+  font-family: 'Titan One', cursive;
+  float: right;
 }
 
+/**------------- CONTENEDOR DEL BOTÓN MENU ------------*/
+.contenedor-menu .boton-menu i {
+  color: var(--white_color2);
+  font-size: 30px;
+  padding-bottom: 5px;
+  cursor: pointer;
+  top: 8px;
+  position: absolute;
+}
 
+.contenedor-menu .boton-menu {
+  width: 20px; /*Ancho del contenedor*/
+  height: 20px; /*Alto del contenedor*/
+  background-color: var(--pink_color2);
+  border: none;
+  top: 2px;
+  position: absolute;
+}
+
+.contenedor-menu .boton-menu i:hover {
+  color: var(--purple_color);
+}
 
 /**------------- LINEA / DIVISIÓN ------------*/
 hr {
   height: 10px;
   background-color: var(--pink_color2);
   position: relative;
-  top: -150px;
+  top: -60px;
   z-index: 2;
   border: none;
+  display: block;
 }
 
 
-/**------------------- CONTENEDOR DEL BOTÓN --------------*/
+/**------------------- CONTENEDOR DEL BOTÓN FLECHA --------------*/
+
 .contenedor-btn .btn-abrir-intro {
   width: 50px; /*Ancho del contenedor*/
   height: 50px; /*Alto del contenedor*/
@@ -107,7 +147,7 @@ hr {
   line-height: 20px; /*Altura de linea*/
   background: var(--blue_color); /*Color azul (inicial)*/
   position: relative; /*Lo utilizo para poder desplazar mi botón*/
-  top: -120px; /*Para subir mi boton*/
+  top: -30px; /*Para subir mi boton*/
   z-index: 3; /*El orden de la capa para que quede arriba*/
   border-radius: 100%; /*Borde de la caja*/
   box-shadow: 0 4px 8px var(--darkBlue_color2); /*Sombra de la caja*/
@@ -124,7 +164,7 @@ hr {
   align-items: center;
   justify-content: center;
   z-index: 3;
-  top: -120px;
+
 }
 
 /**----------- ESTILO ICONO FLECHA ----------*/
@@ -147,17 +187,20 @@ hr {
 
 /**--------------- CONTENEDOR DEL INTRO ---------*/
 .intro {
-  font-family: "Mukta", sans-serif;
-  color: var(--darkBlue_color2);
+  font-family: 'Concert One', cursive;
+  color: var(--darkBlue_color);
   margin-left: 150px;
   margin-right: 150px;
   padding: 20px;
   position: relative;
-  top: -110px;
+  top: -45px;
   z-index: 1;
   border-radius: 10px;
-  border: 5px solid var(--pink_color2);
-  background-color: var(--white_color2);
+  text-align: center;
+  font-size: 15px;
+  /* border: 5px solid var(--pink_color2);
+  background-color: var(--sombra); */
+  background: linear-gradient(#ffffff 40%, #e2b3c5);
   transition: clip-path 0.3s ease-out;
   position: relative;
 }
@@ -174,7 +217,7 @@ hr {
   max-width: 1200px;
   overflow: hidden;
   margin: auto;
-  padding: 30px 0;
+  padding: 30px 30px;
 }
 
 
@@ -186,25 +229,45 @@ hr {
 }
 
 .portada img {   /*div del main js*/
-  width: 80%;
-  height: 70%;
+  width: 100%;
+  height: 80%;
   border-radius: 10px 10px 0 0;
 }
 
-div .portada img {
-position: relative;
+/*------------- Hover Portadas --------------*/
+.portada:hover {
+  /* flex:6;
+  clip: circle(180% at center);
+  transition: clip-path .4s .5s; */
+  background: var(--pink_color);
+  z-index: 4;
+  opacity: 0.8;
+  transform: scale(0.9)
 }
+
 
 .portada {   /*div del main js*/
   border-radius: 10px;
-  width: 250px;
-  height: 450px;
-  box-shadow: var(--blue_color);
+  width: 220px;
+  height: 400px;
   text-transform: uppercase;
   font-size: 12px;
   margin-bottom: 15px;
-  background-color: var(--pink_color);
-  color: white;
+  color: var(--darkBlue_color);
+  background: linear-gradient(#ffffff 80%, #c3d8f0);
+  /* box-shadow: var(--sombra);
+  overflow: hidden; Ocultar un poco el texto de la descripcion mientras arreglamos el resto */
+  /*clip:circle(0 at center);
+  transition: clip-path .2s;*/
+  cursor: pointer;
+}
+
+div .textos_portada {
+  /* font-family: 'Fredoka One', cursiva; */
+  font-family: 'Concert One', cursive;
+  font-size: 12px;
+  text-align: center;
+  padding: 10px 14px;
 }
 
 /* .portada {   /*div del main js
@@ -213,6 +276,6 @@ position: relative;
   margin-bottom: 15px;
   overflow: hidden; /*Ocultar un poco el texto de la descripcion mientras arreglamos el resto
   background-color: var(--pink_color);
-  color: var(--white_color);
+  color: var(--white_color2);
   text-transform: uppercase;
 } */
