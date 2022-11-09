@@ -1,69 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, user-scalable=no, initial-scale=1.0"/>
-    <!-- <script
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE-edge">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0" />
+  <!-- <script
       src="https://kit.fontawesome.com/af6e470cf9.js"
       crossorigin="anonymous"
     ></script>   Link para tener mis iconos de font awesome -->
-    <link rel="stylesheet" href="css/all.min.css"> <!--Al descargar los iconos puedo usarlos de esta manera-->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <title>Data Lovers</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="icon" href="img/icono.ico" />
-  </head>
+  <link rel="stylesheet" href="css/all.min.css">
+  <!--Al descargar los iconos puedo usarlos de esta manera-->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <title>Data Lovers</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="img/icono.ico" />
+</head>
 
-  <body>
+<body>
+  <header>
+    <!-- Menu responsive -->
+    <nav class="menu">
+      <section class="menu__container">
+        <h1 class="menulogo">Studios Ghibli</h1>
 
+        <!-- Insertamos icono hamburguesa y checkbox -->
+        <input type="checkbox" id="menu__movil" class="icon_input">
+        <label for="menu__movil" id="icon__label">
+          <img src="img/menu.svg" alt="iconomenu" class="icon_img">
+        </label>
+        <!-- Menu principal -->
+        <ul class="menu__links">
+          <li class="menu__item">
+            <a href="#" class="menu__link">Home</a>
+          </li>
 
-    <!--IMAGEN PRINCIPAL -->
-  <header class="contenedor">
-    <div class="imagenFondo" id="contenedor-imagen"><img src="img/fondo.jpg" alt="ImagenFondo">
-
-      <!--TITULO PRINCIPAL-->
-      <div class="titulo">
-        <h1>Studios Ghibli films</h1>
-      </div>
-    </div>
-          <!--Menú principal-->
-        <div class="contenedor-menu" id="nav">
-          <nav class="nav-menu">
-            <ul class="lista_menu">
-              <button class="boton-menu" id="boton-menu">
-                <i class="fa-solid fa-bars"></i>
-              </button>
-              <a href="#" class="activo">Inicio</a>  <!-- En # utilizo el HTML que al oprimir me lleve alla-->
-              <a href="#" class="">Peliculas</a>
-              <a href="#" class="">Directores</a>
-              <a href="#" class="">Personajes</a>
+          <li class="menu__item menu__item--show">
+            <a href="#" class="menu__link">Chronology <img src="img/flecha.svg" class="menu_flecha"></a>
+            <ul class="sub__menu">
+              <li class="menu__inside"><a href="#" id="Newest to older" class="menu__link menu__link--inside">Newest to
+                  older</a>
+              </li>
+              <li class="menu__inside"><a href="#" id="Older to newest" class="menu__link menu__link--inside">Older to
+                  newest</a>
+              </li>
             </ul>
-          </nav>
-        </div>
+          </li>
 
-        <!-- <div class="contenedor-btn-menu">
-          <button class="boton-menu" id="boton-menu">
-            <i class="fa-solid fa-bars"></i>
-          </button>
-        </div> -->
-
-
-        <!--CONTENEDOR DEL BOTÓN-->
-        <div class="contenedor-btn">
-          <button class="btn-abrir-intro" id="btn-abrir-intro">
-            <!--Botón que permite abrir y cerrar la intro-->
-            <!--ICONO DEL BOTON ABRIR Y CERRAR-->
-            <i class="fa-solid fa-angle-down"></i>
-          </button>
-        </div>
-        <!--lINEA INTRO-->
-        <hr />
-        <!--tEXTO INTRODUCCIÓN-->
-        <div class="grupo">
-          <div class="intro" id="intro">
+          <li class="menu__item menu__item--show">
+            <a href="#" class="menu__link">Directors <img src="img/flecha.svg" class="menu_flecha"></a>
+            <ul class="sub__menu">
+              <li class="menu__inside"><a href="#" id="Hayao Miyazaki" class="menu__link menu__link--inside">Hayao
+                  Miyazaki</a>
+              </li>
+              <li class="menu__inside"><a href="#" id="Hiroyuki Morita" class="menu__link menu__link--inside">Hiroyuki
+                  Morita</a>
+              </li>
+              <li class="menu__inside"><a href="#" id="Gorō Miyazaki" class="menu__link menu__link--inside">Gorō
+                  Miyazaki</a>
+              </li>
+              <li class="menu__inside"><a href="#" id="Yoshifumi Kondō" class="menu__link menu__link--inside">Yoshifumi
+                  Kondō</a>
+              </li>
+              <li class="menu__inside"><a href="#" id="Hiromasa Yonebayashi"
+                  class="menu__link menu__link--inside">Hiromasa
+                  Yonebayashi</a></li>
+              <li class="menu__inside"><a href="#" id="Isao Takahata" class="menu__link menu__link--inside">Isao
+                  Takahata</a>
+              </li>
+            </ul>
+          </li>
+          <li class="menu__item">
+            <a href="#" class="menu__link">Search</a>
+          </li>
+        </ul>
+      </section>
+    </nav>
+    <!-- Header image -->
+    <section class="intro__fondo">
+      <img src="img/fondo.jpg" alt="imgFondo" class="img__fondo">
+      <!--<p>"Always believe in yourself. Do this and no matter where you are, you will have nothing to fear." 
+                  Hayao Miyazaki</p> -->
+    </section>
+    <!-- Expand and Collapse Section Introduction -->
+    <section class="intro__text">
+      <input type="checkbox" id="flecha__movil" class="icon_flecha1">
+      <label for="flecha__movil" class="label__flecha">
+        <img src="img/flecha1.svg" alt="iconoflecha" class="icon_flecha">
+      </label>
+      <div class="contenido__intro">
+        <h2>
           Studio Ghibli Inc. is a Japanese animation
           studio. It is best known for its animated feature films. Its mascot
           and most recognizable symbol is a character named Totoro. These films
@@ -73,24 +100,36 @@
           Moving Castle (2004) and Ponyo (2008). Some of these films have
           received nominations and have won some of them.
           <!-- (株式会社スタジオジブリ) -->
-          </div>
-        </div>
-      </main>
-
+        </h2>
+      </div>
+    </section>
   </header>
 
+  <!-- CONTENEDOR DE LA DATA  -->
 
-<section class="contenedor-pelis" id="contenedor-pelis">
-  <main>
-      <div class="peliculas" id="peliculas">
-      <div class="title" id="title"></div>
-      <div class="poster" id="poster"></div>
-      <div class="release_date" id="release_date"></div>
+  <main class="contenedor-pelis">
+    <section class="tarjetas" id="tarjetas">
+    </section>
+    
+    <div class="contenedorModal">
+      <section class="contBotonModal" id="contBotonModal">
+      </section>
+    </div>
+    
+    <div class="modal-container">
+      <div class = "modal modal-close">
+        <p class = "close">X</p>
       </div>
+    </div>
+    
+    
+    
+    </main>
 
-  </main>
-</section>
+    
 
-    <script src="main.js" type="module"></script>
-  </body>
+  <script src="main.js" type="module"></script>
+
+</body>
+
 </html>
