@@ -28,6 +28,8 @@ function visualizarPelis(dataMovies) {
 }
 window.onload = () => { visualizarPelis(data.films) };
 
+/**------------- EVENTO CLICK PARA EL MENU DIRECTORES ----------------**/
+
 const directoresPel = document.querySelectorAll(".menu-dir");
 
 directoresPel.forEach((director) => {
@@ -41,7 +43,7 @@ directoresPel.forEach((director) => {
     )
 });
 
-// Evento click para el menu HOME
+/**------------- EVENTO CLICK PARA EL MENU HOME ----------------**/
 
 const home = document.getElementById("home")
 
@@ -49,3 +51,4 @@ home.addEventListener("click", () => {
     visualizarPelis(films)
 });
 
+//Evento click para el menu de las mas nuevas 
