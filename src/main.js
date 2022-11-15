@@ -1,10 +1,10 @@
 import data from "./data/ghibli/ghibli.js";
-import ghibli from "./data/ghibli/ghibli.js";
-// import {filterDir} from "./data.js";
+// import ghibli from "./data/ghibli/ghibli.js";
+import {filterDir} from "./data.js";
 
 
 
-let films = data.films;
+const films = data.films;
 // console.log(films);
 
 const peliculas = document.getElementById("tarjetas");
@@ -26,36 +26,48 @@ for (let i = 0; i < films.length; i++) {
     </div>`
 }
 
-const botonHayao = document.getElementById("Hayao-Miyazaki");
-// const botonHiroyuki = document.getElementById("Hiroyuki-Morita");
-// const botonGorō = document.getElementById("Gorō-Miyazaki");
-// const botonYoshifumi = document.getElementById("Yoshifumi-Kondō");
-// const botonHiromasa = document.getElementById("Hiromasa-Yonebayashi");
-// const botonIsao = document.getElementById("Isao-Takahata");
-const contenedor = document.getElementById("tarjetas");
-const limpiarContenedor = () => {
-  contenedor.innerHTML = "";
-  };
 
-const directores = ghibli.films;
+const directoresPel = document.querySelectorAll(".menu-dir");
 
-const filterDirector = directores.filter ((films) => {
-return films.director === "Hayao Miyazaki";
-});
-
-botonHayao.addEventListener ("click", () => {
-limpiarContenedor ();
-filterDirector.forEach ((films) => {
-contenedor.innerHTML += `
-<h2> ${films.director}</h2}`;
-});
+directoresPel.forEach((director) => {
+  // console.log(d)
+  director.addEventListener("click", () => {
+    const showDirector = filterDir (films, director.id)
+    console.log(showDirector);
+  }
+  )
 });
 
 
 
-// const filterDirector = document.getElementById("filter-director");
-// filterDirector.addEventListener("change", () => {
-//   let newArray = directorGhibli;
-//   show (filterDir(directorGhibli.films, filterDirector.value));
+
+
+
+
+// const botonHayao = document.getElementById("Hayao-Miyazaki");
+// // const botonHiroyuki = document.getElementById("Hiroyuki-Morita");
+// // const botonGorō = document.getElementById("Gorō-Miyazaki");
+// // const botonYoshifumi = document.getElementById("Yoshifumi-Kondō");
+// // const botonHiromasa = document.getElementById("Hiromasa-Yonebayashi");
+// // const botonIsao = document.getElementById("Isao-Takahata");
+// const contenedor = document.getElementById("tarjetas");
+// const limpiarContenedor = () => {
+//   contenedor.innerHTML = "";
+//   };
+
+// const directores = ghibli.films;
+
+// const filterDirector = directores.filter ((films) => {
+// return films.director === "Hayao Miyazaki";
 // });
+
+// botonHayao.addEventListener ("click", () => {
+// limpiarContenedor ();
+// filterDirector.forEach ((films) => {
+// contenedor.innerHTML += `
+// <h2> ${films.director}</h2}`;
+// });
+// });
+
+
 
