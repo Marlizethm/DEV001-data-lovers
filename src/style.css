@@ -129,6 +129,17 @@
 }
 
 
+/*----------- ICONO HAMBURGUESA MENU -------------*/
+#icon__label i {
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.fa-bars:hover {
+  color: var(--purple_color);
+}
+
+
 /**------------- FIN MENÚ PRINCIPAL ----------------**/
 
 
