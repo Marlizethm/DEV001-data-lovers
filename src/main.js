@@ -1,6 +1,5 @@
 import data from "./data/ghibli/ghibli.js";
-// import ghibli from "./data/ghibli/ghibli.js";
-import { filterDir } from "./data.js";
+import { filterDir, newPelis, oldPelis } from "./data.js";
 
 const films = data.films;
 
@@ -9,8 +8,6 @@ function visualizarPelis(dataMovies) {
     const peliculas = document.getElementById("tarjetas");
     peliculas.innerHTML = "";
     for (let i = 0; i < dataMovies.length; i++) {
-        // console.log(films[i].title);
-        // console.log(films[i].poster);
         peliculas.innerHTML += `
     <div class = "portada">
     <img src="${dataMovies[i].poster}" alt"">
@@ -28,27 +25,37 @@ function visualizarPelis(dataMovies) {
 }
 window.onload = () => { visualizarPelis(data.films) };
 
+/**------------- EVENTO CLICK PARA EL MENU HOME ----------------**/
+
+const home = document.getElementById("home")
+home.addEventListener("click", () => {
+    visualizarPelis(films)
+});
+
 /**------------- EVENTO CLICK PARA EL MENU DIRECTORES ----------------**/
 
 const directoresPel = document.querySelectorAll(".menu-dir");
 
 directoresPel.forEach((director) => {
-    // console.log(d)
     director.addEventListener("click", () => {
         const showDirector = filterDir(films, director.id)
         visualizarPelis(showDirector);
-
         // console.log(showDirector);
-    }
-    )
+    })
 });
 
-/**------------- EVENTO CLICK PARA EL MENU HOME ----------------**/
+/**------------- EVENTO CLICK PARA ORDENAR PELICULAS DE LA MAS RECIENTE A LA MENOS RECIENTE ----------------**/
 
-const home = document.getElementById("home")
-
-home.addEventListener("click", () => {
-    visualizarPelis(films)
+const newestMovies = document.getElementById("newMovies")
+newestMovies.addEventListener("click", () => {
+    const showNewestMovies = newPelis(films)
+    visualizarPelis(showNewestMovies);
 });
 
-//Evento click para el menu de las mas nuevas 
+/**------------- EVENTO CLICK PARA ORDENAR PELICULAS DE LA MAS RECIENTE A LA MENOS RECIENTE ----------------**/
+
+const oldestMovies = document.getElementById("oldMovies")
+oldestMovies.addEventListener("click", () => {
+    const showOldestMovies = oldPelis(films)
+    visualizarPelis(showOldestMovies);
+});
