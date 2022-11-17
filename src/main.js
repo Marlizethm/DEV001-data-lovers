@@ -3,6 +3,9 @@ import { filterDir, newPelis, oldPelis } from "./data.js";
 
 const films = data.films;
 
+
+/**------------- FUNCIÓN PARA VISUALIZAR LA DATA ----------------**/
+
 function visualizarPelis(dataMovies) {
 
     const peliculas = document.getElementById("tarjetas");
@@ -11,9 +14,10 @@ function visualizarPelis(dataMovies) {
         peliculas.innerHTML += `
     <div class = "portada">
     <img src="${dataMovies[i].poster}" alt"">
-    <div class = "boton_modal">
-        <a href="#" class="botonModal">+</a>
-        </div>
+
+    <button class="boton_id" id="boton_id">+</button>
+    <section class="modal" id="modal"></section>
+
 
     <div class = "textos_portada">
         <h2>${dataMovies[i].title}</h2>
@@ -59,3 +63,25 @@ oldestMovies.addEventListener("click", () => {
     const showOldestMovies = oldPelis(films)
     visualizarPelis(showOldestMovies);
 });
+
+/**------------- FUNCIÓN PARA MOSTRAR EL MODAL ----------------**/
+const abrir = document.getElementById("modal_id");
+const cerrar = document.getElementById("close");
+const modal = document.getElementById("modal");
+
+abrir.addEventListener("click", function () {
+    modal.style.display = "block";
+});
+
+cerrar.addEventListener("click", function () {
+    modal.style.display = "none";
+});
+/**------------- FUNCIÓN PARA MOSTRAR LA DATA EN EL MODAL ----------------**/
+
+
+
+{/* <div class="boton_Modal">
+        <div class="contenedor_modal">
+          <button class="close" id="close">X</button>
+        </div>
+      </div> */}
