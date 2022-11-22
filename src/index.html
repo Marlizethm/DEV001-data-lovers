@@ -7,7 +7,11 @@
       name="viewport"
       content="width=device-width, user-scalable=no, initial-scale=1.0"
     />
-    <script src="https://kit.fontawesome.com/af6e470cf9.js" crossorigin="anonymous"></script>  <!-- Link para tener mis iconos de font awesome-->
+    <script
+      src="https://kit.fontawesome.com/af6e470cf9.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Link para tener mis iconos de font awesome-->
     <link rel="stylesheet" href="css/all.min.css" />
     <!--Al descargar los iconos puedo usarlos de esta manera-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -38,6 +42,10 @@
             </li>
 
             <li class="menu__item">
+              <a href="#" class="menu__link" id="Statistics">Statistics</a>
+            </li>
+
+            <li class="menu__item">
               <a href="#" class="menu__link"
                 >Chronology
                 <img
@@ -60,13 +68,8 @@
             </li>
 
             <li class="menu__item">
-              <a href="#" class="menu__link"
-                >Directors
-                <img
-                  src="img/flecha.svg"
-                  class="menu_flecha"
-                  id="filter-Director"
-              /></a>
+              <a href="#" class="menu__link">Directors
+                <img src="img/flecha.svg" class="menu_flecha" id="filter-Director"/></a>
               <ul class="sub__menu">
                 <li class="menu__inside">
                   <a href="#" id="Hayao Miyazaki" class="menu__link menu-dir"
@@ -120,7 +123,7 @@
         <input type="checkbox" id="flecha__movil" class="icon_flecha1" />
         <label for="flecha__movil" class="label__flecha">
           <!-- <img src="img/flecha1.svg" alt="iconoflecha" class="icon_flecha"> -->
-          <i class="fa-solid fa-angle-up icon_flecha"  alt="iconoflecha" ></i>
+          <i class="fa-solid fa-angle-up icon_flecha" alt="iconoflecha"></i>
         </label>
         <div class="contenido__intro">
           <h2>
@@ -153,12 +156,19 @@
           </div>
         </div> -->
 
+        <div class="contenedor_boton_top">
+          <div class="boton_top">
+            <i class="fa-solid fa-angle-up"></i>
+          </div>
+        </div>
 
     </main>
 
     <footer class="footer" id="footer1">
-      <p>Proyecto data lovers : Elaboración por Valentina Aponte y Marlizeth Tapia
-      para Laboratoria.</p>
+      <p>
+        Proyecto data lovers : Elaboración por Valentina Aponte y Marlizeth
+        Tapia para Laboratoria.
+      </p>
     </footer>
 
     <script src="main.js" type="module"></script>

@@ -29,6 +29,27 @@ function visualizarPelis(dataMovies) {
 }
 window.onload = () => { visualizarPelis(data.films) };
 
+
+/**--------- FUNCIÓN PARA FLECHA UP */
+
+  window.onscroll = function(){
+    if(document.documentElement.scrollTop > 100){
+      document.querySelector(".contenedor_boton_top")
+      .classList.add("show");
+    }else{
+      document.querySelector(".contenedor_boton_top")
+      .classList.remove("show");
+    }
+  }
+
+  document.querySelector(".contenedor_boton_top")
+  .addEventListener("click", () => {
+    window.scrollTo({
+      top:0,
+      behavior:"smooth"
+    });
+  });
+
 /**------------- EVENTO CLICK PARA EL MENU HOME ----------------**/
 
 const home = document.getElementById("home")

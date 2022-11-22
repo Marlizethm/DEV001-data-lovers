@@ -384,7 +384,71 @@ div .textos_portada p {
   color: var(--white_color2);
 }
 
+/*--------- Botón UP Contenedor -------------*/
 
+.contenedor_boton_top{
+  position: fixed;
+  bottom: 5px;
+  right: 18px;
+  width: 18px;
+  z-index: -10px;
+}
+
+.boton_top{
+  width: 0px;
+  height: 0px;
+  background: var(--darkBlue_color);
+  box-shadow: 0px 0px 8px var(--purple_color);
+  border-radius: 60%;
+  cursor: pointer;
+  transition: .2s;
+  top: 30%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+.boton_top i{
+  position: absolute;
+  font-size: 20px;
+  top: 48%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  color: var(--white_color2);
+  transition: .2s;
+}
+
+.show{
+  z-index: 10;
+}
+
+.show .boton_top{
+  animation: popup .3s ease-in-out;
+  width: 40px;
+  height: 40px;
+  z-index: 11;
+}
+
+.show i{
+  transform: translate(-50%, -50%) scale(1);
+}
+
+@keyframes popup{
+  0%{
+    width: 0px;
+    height: 0px;
+  }
+
+  50%{
+    width: 50px;
+    height: 50px;
+  }
+
+  100%{
+    width: 40px;
+    height: 40px;
+  }
+}
 
 /**------------------- FIN PORTADAS PELICULAS ---------------*/
 

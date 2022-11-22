@@ -1,3 +1,7 @@
+
+
+/**------------- FUNCION DE FILTER PARA LOS DIRECTORES ----------------**/
+
 export const filterDir = (data, director) => {
   const filtrarDirector = data.filter (data => data.director === director);{
     return filtrarDirector;
