@@ -1,7 +1,8 @@
 import data from "./data/ghibli/ghibli.js";
-import { filterDir, newPelis, oldPelis } from "./data.js";
+import { filterDir, newPelis, oldPelis,} from "./data.js";
 
-const films = data.films;
+const pelis = data.films;
+
 
 
 /**------------- FUNCIÓN PARA VISUALIZAR LA DATA ----------------**/
@@ -30,32 +31,45 @@ function visualizarPelis(dataMovies) {
 window.onload = () => { visualizarPelis(data.films) };
 
 
-/**--------- FUNCIÓN PARA FLECHA UP */
 
-  window.onscroll = function(){
-    if(document.documentElement.scrollTop > 100){
-      document.querySelector(".contenedor_boton_top")
-      .classList.add("show");
-    }else{
-      document.querySelector(".contenedor_boton_top")
-      .classList.remove("show");
-    }
-  }
 
-  document.querySelector(".contenedor_boton_top")
-  .addEventListener("click", () => {
-    window.scrollTo({
-      top:0,
-      behavior:"smooth"
-    });
-  });
+// /**------------- FUNCIÓN PARA VISUALIZAR EL SCORE Y EL TITULO----------------**/
+//   function visualizarScore(scoreFilms) {
+//       const scorePelis = document.getElementById("statistics");
+//       scorePelis.innerHTML = "";
+//       for (let i = 0; i < scoreFilms.length; i++) {
+//         scorePelis.innerHTML += `
+//         <div class = "textos_score">
+//         <h2>${scoreFilms[i].title}</h2>
+//         <h2>${scoreFilms[i].rt_score}</h2>
+//         </div>
+//     `
+//   }
+// }
+// window.onload = () => { visualizarScore(data.films) };
+
+
+// // const scoreFilms = document.getElementById("statistics");
+// //   scoreFilms.textContent = score (rt_score, "score");
+
+// /**------------- EVENTO CLICK PARA EL MENU STATISTICS ----------------**/
+// const puntaje = document.getElementById("statistics");
+//   puntaje.addEventListener("click", () => {
+//     const punScore = score (pelis)
+//       visualizarScore(punScore)
+// });
+
+
+
 
 /**------------- EVENTO CLICK PARA EL MENU HOME ----------------**/
 
 const home = document.getElementById("home")
 home.addEventListener("click", () => {
-    visualizarPelis(films)
+    visualizarPelis(pelis)
 });
+
+
 
 /**------------- EVENTO CLICK PARA EL MENU DIRECTORES ----------------**/
 
@@ -63,7 +77,7 @@ const directoresPel = document.querySelectorAll(".menu-dir");
 
 directoresPel.forEach((director) => {
     director.addEventListener("click", () => {
-        const showDirector = filterDir(films, director.id)
+        const showDirector = filterDir(pelis, director.id)
         visualizarPelis(showDirector);
         // console.log(showDirector);
     })
@@ -73,7 +87,7 @@ directoresPel.forEach((director) => {
 
 const newestMovies = document.getElementById("newMovies")
 newestMovies.addEventListener("click", () => {
-    const showNewestMovies = newPelis(films)
+    const showNewestMovies = newPelis(pelis)
     visualizarPelis(showNewestMovies);
 });
 
@@ -81,23 +95,43 @@ newestMovies.addEventListener("click", () => {
 
 const oldestMovies = document.getElementById("oldMovies")
 oldestMovies.addEventListener("click", () => {
-    const showOldestMovies = oldPelis(films)
+    const showOldestMovies = oldPelis(pelis)
     visualizarPelis(showOldestMovies);
 });
 
-/**------------- FUNCIÓN PARA MOSTRAR EL MODAL ----------------**/
-const abrir = document.getElementById("modal_id");
-const cerrar = document.getElementById("close");
-const modal = document.getElementById("modal");
+/**--------- FUNCIÓN PARA FLECHA UP */
 
-abrir.addEventListener("click", function () {
-    modal.style.display = "block";
+window.onscroll = function(){
+  if(document.documentElement.scrollTop > 100){
+    document.querySelector(".contenedor_boton_top")
+    .classList.add("show");
+  }else{
+    document.querySelector(".contenedor_boton_top")
+    .classList.remove("show");
+  }
+}
+
+document.querySelector(".contenedor_boton_top")
+.addEventListener("click", () => {
+  window.scrollTo({
+    top:0,
+    behavior:"smooth"
+  });
 });
 
-cerrar.addEventListener("click", function () {
-    modal.style.display = "none";
-});
-/**------------- FUNCIÓN PARA MOSTRAR LA DATA EN EL MODAL ----------------**/
+// /**------------- FUNCIÓN PARA MOSTRAR EL MODAL ----------------**/
+// const abrir = document.getElementById("modal_id");
+// const cerrar = document.getElementById("close");
+// const modal = document.getElementById("modal");
+
+// abrir.addEventListener("click", function () {
+//     modal.style.display = "block";
+// });
+
+// cerrar.addEventListener("click", function () {
+//     modal.style.display = "none";
+// });
+
 
 
 

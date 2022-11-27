@@ -256,6 +256,42 @@
 
 
 
+
+/**------------------- INICIO DATOS / ESTADISTICA ---------------*/
+
+.contenedor-score {
+  width: 100%;
+  max-width: 1400px;
+  z-index: 4;
+  margin: auto;
+  padding-top: 30px;
+  position: relative;
+}
+.tarjetas-score {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+div .textos_score h2 {
+  /*------Titulo y el año--------*/
+  /* font-family: 'Fredoka One', cursiva; */
+  font-family: 'Righteous', cursive;
+  font-size: 15px;
+  text-align: center;
+  padding: 3px 10px 5px 4px;
+}
+
+/**------------------- FIN DATOS / ESTADISTICA ---------------*/
+
+
+
+
+
+
+
 /**------------------- INICIO PORTADAS PELICULAS ---------------*/
 
 .contenedor-pelis {
@@ -506,8 +542,6 @@ footer {
     .footer p{
       padding-bottom: 6px;
       position:relative;
-
-
     }
 
     .menu__container {
